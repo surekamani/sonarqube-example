@@ -1,1 +1,1 @@
-# sonarqube-example
+# sonarqube-example.
