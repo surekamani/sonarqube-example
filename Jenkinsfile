@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent { label 'sonarqube'}
     stages{
        stage('Git Checkout Stage'){
             steps{
@@ -14,7 +14,7 @@ pipeline{
         stage('SonarQube Analysis Stage') {
             steps{
                 withSonarQubeEnv('sonarqube') { 
-                    sh "mvn clean verify sonar:sonar -Dsonar.projectKey=sonar-test"
+                    sh "mvn clean verify sonar:sonar -Dsonar.projectKey=sonar-test1"
                 }
             }
         }
